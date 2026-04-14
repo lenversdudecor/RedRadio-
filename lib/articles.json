@@ -1,0 +1,29 @@
+[
+  {
+    "slug": "la-nuit-des-objets",
+    "title": "La nuit des objets",
+    "excerpt": "Quand les objets prennent la parole et racontent la ville.",
+    "content": "<p>La ville s'endort et les objets se mettent à converser. Ils échangent des souvenirs, des brisures d'instants, des notes qui ne passent jamais à la radio.</p><p>Ce récit explore ces voix discrètes, entre ironie et tendresse, en suivant une lampe de rue, une valise oubliée et un lampadaire au coin d'une place.</p>",
+    "author": "Marion Delatour",
+    "date": "2025-11-03",
+    "tags": ["fiction", "ville", "objets"]
+  },
+  {
+    "slug": "l-etrange-sillage",
+    "title": "L'étrange sillage",
+    "excerpt": "Une mémoire flottante entre ondes et souvenirs.",
+    "content": "<p>Il existe un sillage qui ne se voit pas mais s'entend: l'onde que laisse un souvenir en partant. On la suit à travers stations, cafés et bureaux de poste.</p>",
+    "author": "Jonas Petit",
+    "date": "2025-08-21",
+    "tags": ["reportage", "mémoire"]
+  },
+  {
+    "slug": "atlas-des-silences",
+    "title": "Atlas des silences",
+    "excerpt": "Cartographier les absences pour mieux entendre ce qui reste.",
+    "content": "<p>Ce dossier dessine une cartographie des silences: lieux, gestes et objets où l'absence crée une écoute nouvelle.</p>",
+    "author": "Amina Rachid",
+    "date": "2025-06-12",
+    "tags": ["essai", "son", "cartographie"]
+  }
+]

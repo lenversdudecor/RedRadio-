@@ -1,0 +1,27 @@
+name: Intégration Continue (CI) - RedRadio
+
+# Ce workflow se déclenche à chaque fois qu'on pousse du code sur la branche principale
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 📥 Récupération du code
+      uses: actions/checkout@v3
+
+    - name: ⚙️ Configuration de Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18.x' # Version stable pour Next.js
+
+    - name: 📦 Installation des dépendances
+      run: npm install
+
+    - name: 🧪 Lancement des tests unitaires (Jest)
+      run: npm testgit add .
