@@ -13,15 +13,15 @@ jobs:
 
     steps:
     - name: 📥 Récupération du code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: ⚙️ Configuration de Node.js
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
-        node-version: '18.x' # Version stable pour Next.js
+        node-version: '18.x'
 
     - name: 📦 Installation des dépendances
       run: npm install
 
     - name: 🧪 Lancement des tests unitaires (Jest)
-      run: npm testgit add .
+      run: npm test
