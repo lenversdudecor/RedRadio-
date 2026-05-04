@@ -5,47 +5,49 @@ import casque from "@/public/img/casque.jpg";
 import terre from "@/public/img/terre.jpg";
 import Casque from "@/public/img/casque2.jpg";
 
-
-
-
-
 const slides = [
-  // 1. SLIDE 0 (ACCUEIL)
-  // 2. SLIDES TEXTE
+  // 1. SLIDE 0 (ACCUEIL) - Répond au "Qui, Quoi, Pour qui"
   {
     id: 1,
     type: "text",
-    text: " L'Envers du Décor : La Webradio qui lève le voile.",
-    sub: "Introduction",
+    text: "L'Envers du Décor : La webradio qui lève le voile.",
+    sub: "R.E.D : Votre média de proximité en Seine-et-Marne. Sport, Gastronomie et Culture racontés sans filtre pour une communauté d'insatiables curieux.",
     img: micro
   },
+
+  // 2. SLIDE SPORT - Met en avant le premier pilier d'émissions
   {
     id: 2,
     type: "text",
-    text: "On mélange le Voyage et l'Histoire. L'Histoire s'écrit ensemble, du passé aux horizons lointains. Que ce soit pour explorer les secrets d'un lieu oublié ou pour s'évader à l'autre bout du monde, chaque émission est un voyage. Nous traversons les frontières et les époques pour nourrir votre imaginaire.",
-    sub: "L'Origine",
+    text: "Le Sport au cœur de l'action.",
+    sub: "Du débriefing PSG aux initiatives locales, nous vibrons avec vous derrière le micro pour partager l'essentiel, sans langue de bois.",
     img: camera
   },
+
+  // 3. SLIDE CULTURE & HISTOIRE - Met en avant le second pilier
   {
     id: 3,
     type: "text",
-    text: "On intègre la notion de \"Communauté\" et d'échange. Plus qu'une fréquence, un lieu de rencontre. Laissez-vous emporter par la magie de la radio. Loin des débats stériles, nous créons un espace d'échange authentique où supporters, voyageurs et passionnés du monde entier se retrouvent pour partager l'instant.",
-    sub: "Le Chaos",
+    text: "L'Histoire et la Culture en immersion.",
+    sub: "Explorez les secrets de notre territoire et évadez-vous à travers des récits authentiques qui nourrissent l'imaginaire.",
     img: casque
   },
+
+  // 4. SLIDE GASTRONOMIE & ÉCHANGE - Met en avant le troisième pilier
   {
     id: 4,
     type: "text",
-    text: "Le micro est ouvert. Rejoignez le débat. La communauté vous attend. Montez le son, vivez les moments forts avec nous et entrez dans la danse. C'est votre radio, c'est votre passion.",
-    sub: "Rejoignez-nous",
+    text: "La Gastronomie et l'Art de vivre.",
+    sub: "Découvrez les talents et les saveurs qui font la richesse de nos terroirs. Un espace d'échange bienveillant où chaque voix compte.",
     img: terre
   },
-  // 3. SLIDE FINAL (BOUTONS)
+
+  // 5. SLIDE FINAL (BOUTONS) - Call-to-action vers le direct et les podcasts
   {
     id: 5,
     type: "cta", 
-    text: "",
-    sub: "",
+    text: "Prêt à passer derrière le rideau ?",
+    sub: "Rejoignez la communauté R.E.D et vivez l'instant avec nous.",
     img: Casque
   }
 ];
