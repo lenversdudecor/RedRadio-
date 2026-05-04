@@ -15,7 +15,7 @@ const slides = [
   {
     id: 1,
     type: "text",
-    text: " On reprend \"Vibrer\" et \"Passions\" mais avec élégance. Bienvenue dans L'Envers du Décor. Une radio qui vibre au rythme de vos passions. Ici, pas de barrières. Du sport à la gastronomie, de l'Histoire à la Pop Culture, nous réunissons une communauté d'insatiables curieux. Scrollez pour découvrir ce qui nous unit.",
+    text: " L'Envers du Décor : La Webradio qui lève le voile.",
     sub: "Introduction",
     img: micro
   },
