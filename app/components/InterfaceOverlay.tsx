@@ -19,7 +19,7 @@ export default function InterfaceOverlay({openMenu}: InterfaceOverlayProps) {
       </button>
         
       {/* Haut Droite: Twitch */}
-      <Link href="https://twitch.tv/votrechaine" target="_blank" className={`${btnClass} top-6 right-6 md:top-10 md:right-10`}>
+      <Link href="https://www.twitch.tv/radioenversdudecorred" target="_blank" className={`${btnClass} top-6 right-6 md:top-10 md:right-10`}>
         <span className="md:inline">Twitch</span>
         <Twitch size={14} className="hidden md:inline" />
       </Link>
