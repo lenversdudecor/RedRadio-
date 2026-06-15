@@ -42,7 +42,7 @@ export default function MenuOverlay ({isOpen, onClose} : MenuOverlayProps){
                 target={link.external ? "_blank": undefined}
                 onClick={onClose}
                 className="group flex items-baseline gap-6 font-serif text-5xl md:text-7xl lg:text-8xl hover:text-white transition-colors">
-                  <span className="font-sans text-sm md:text-base text-white/60 font-bold tracking-widest -translate-y-4 group-hover:text-white transition-colors">
+                  <span className="font-sans text-sm md:text-base text-white/80 font-bold tracking-widest -translate-y-4 group-hover:text-white transition-colors">
                     {link.id}
                   </span>
                   
@@ -50,11 +50,11 @@ export default function MenuOverlay ({isOpen, onClose} : MenuOverlayProps){
                     <span className="block group-hover:-translate-y-full transition-transform duration-500 ease-[0.22,1,0.36,1]">
                       {link.label}
                     </span>
-                    <span className="absolute top-0 left-0 block translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[0.22,1,0.36,1] text-white/40 italic">
+                    <span className="absolute top-0 left-0 block translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[0.22,1,0.36,1] text-white/70 italic">
                       {link.label}
                     </span>
                   </span>
-                  <ArrowRight size ={24} className="opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-white/50"/>
+                  <ArrowRight size ={24} className="opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-white/80"/>
                 </Link>
               </motion.div>
             ))}

@@ -15,7 +15,7 @@ export default function StorySlider() {
   // Style des boutons (J'ai retiré 'pointer-events-auto' d'ici pour le gérer dynamiquement)
   const ctaClass = "group relative flex items-center gap-4 px-8 py-4 border border-white/20 bg-black/50 backdrop-blur-sm hover:bg-neutral-900 transition-all duration-500 overflow-hidden min-w-[240px] justify-center cursor-pointer";
   const textClass = "font-serif text-3xl text-white group-hover:text-white transition-colors z-10";
-  const iconClass = "text-white/70 group-hover:text-white transition-colors z-10";
+  const iconClass = "text-white group-hover:text-white transition-colors z-10";
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
