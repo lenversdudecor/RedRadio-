@@ -9,7 +9,7 @@ export default function PrivacyPolicyPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <main className="min-h-screen bg-[#050505] text-[#e0d5c1] selection:bg-orange-900 selection:text-white font-sans overflow-x-hidden">
+    <main className="min-h-screen bg-[#050505] text-white selection:bg-orange-900 selection:text-white font-sans overflow-x-hidden">
       
       <div className="noise-overlay" />
       <div className="ambient-light fixed inset-0 opacity-20 pointer-events-none" />
@@ -19,19 +19,19 @@ export default function PrivacyPolicyPage() {
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 md:px-12 py-24 md:py-32">
         
-        <Link href="/" className="inline-flex items-center gap-2 text-neutral-400 hover:text-orange-400 transition-colors mb-12">
+        <Link href="/" className="inline-flex items-center gap-2 text-white/80 hover:text-orange-400 transition-colors mb-12">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5">
             <path d="M10 2L4 8l6 6"/>
           </svg>
-          <span className="text-sm font-medium">Retour à l'accueil</span>
+          <span className="text-base font-medium">Retour à l'accueil</span>
         </Link>
 
-        <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-8 text-transparent bg-clip-text bg-linear-to-r from-neutral-200 via-orange-100 to-neutral-200">
+        <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl mb-8 text-transparent bg-clip-text bg-linear-to-r from-white via-orange-100 to-white">
           Politique de Confidentialité
         </h1>
 
-        <div className="prose prose-invert max-w-none text-neutral-300 [&_h2]:text-orange-200 [&_h2]:font-serif [&_h2]:mt-10 [&_h2]:mb-4 [&_h2]:text-2xl [&_p]:mb-4 [&_p]:leading-relaxed [&_a]:text-orange-400 [&_a:hover]:text-orange-300">
-          <p className="text-neutral-500 mb-8 italic">Dernière mise à jour : 8 Avril 2026</p>
+        <div className="prose prose-invert max-w-none text-white [&_h2]:text-orange-200 [&_h2]:font-serif [&_h2]:mt-10 [&_h2]:mb-4 [&_h2]:text-3xl [&_p]:mb-4 [&_p]:leading-relaxed [&_p]:text-lg [&_a]:text-orange-400 [&_a:hover]:text-orange-300">
+          <p className="text-white/70 mb-8 italic text-base">Dernière mise à jour : 8 Avril 2026</p>
 
           <h2>1. Responsable du traitement</h2>
           <p>Le responsable du traitement des données est <strong>La Radio de l'Envers du Décor</strong>.</p>
@@ -39,7 +39,7 @@ export default function PrivacyPolicyPage() {
 
           <h2>2. Données collectées</h2>
           <p>Lorsque vous utilisez notre formulaire de contact, nous collectons de manière explicite les données suivantes :</p>
-          <ul className="list-disc pl-6 mb-4 marker:text-orange-600">
+          <ul className="list-disc pl-6 mb-4 marker:text-orange-600 text-lg">
             <li>Identifiant (Nom de Code)</li>
             <li>Adresse email (Fréquence de Retour)</li>
             <li>Contenu du message (Données Cryptées)</li>
@@ -60,7 +60,7 @@ export default function PrivacyPolicyPage() {
 
           <h2>6. Vos droits</h2>
           <p>Conformément au RGPD, vous disposez des droits suivants concernant vos données personnelles :</p>
-          <ul className="list-disc pl-6 mb-4 marker:text-orange-600">
+          <ul className="list-disc pl-6 mb-4 marker:text-orange-600 text-lg">
             <li>Droit d'accès et de portabilité</li>
             <li>Droit de rectification</li>
             <li>Droit d'effacement (droit à l'oubli)</li>
@@ -70,7 +70,7 @@ export default function PrivacyPolicyPage() {
 
           <h2>7. Politique relative aux cookies et traceurs</h2>
           <p>La Radio de l'Envers du Décor utilise des cookies et technologies similaires (comme le stockage local de votre navigateur) pour améliorer votre expérience de navigation et gérer le lecteur audio de manière fluide.</p>
-          <ul className="list-disc pl-6 mb-4 marker:text-orange-600">
+          <ul className="list-disc pl-6 mb-4 marker:text-orange-600 text-lg">
             <li><strong>Obligatoires / Strictement nécessaires :</strong> Cookies essentiels au bon fonctionnement du site (ex: maintenir la lecture audio continue en arrière-plan pendant la navigation, ou se souvenir de votre choix de consentement). Ils ne nécessitent pas de consentement préalable.</li>
             <li><strong>Analytiques / Optionnels :</strong> Peuvent être utilisés pour mieux comprendre l'audience de nos ondes et améliorer nos contenus.</li>
           </ul>

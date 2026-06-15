@@ -69,7 +69,7 @@ const response = await fetch("/send-mail.php", {
   };
 
   return (
-    <main className="relative min-h-screen bg-[#050505] text-[#e0d5c1] selection:bg-red-900 selection:text-white font-sans overflow-hidden">
+    <main className="relative min-h-screen bg-[#050505] text-white selection:bg-red-900 selection:text-white font-sans overflow-hidden">
       
       <div className="noise-overlay" />
       <div className="ambient-light fixed inset-0 opacity-20 pointer-events-none" />
@@ -83,17 +83,17 @@ const response = await fetch("/send-mail.php", {
           <motion.div 
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 px-3 py-1 border border-red-900/50 bg-red-900/10 rounded-full mb-6"
+            className="inline-flex items-center gap-2 px-4 py-2 border border-red-900/50 bg-red-900/10 rounded-full mb-6"
           >
-            <span className="relative flex h-2 w-2">
+            <span className="relative flex h-3 w-3">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-red-600"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-red-600"></span>
             </span>
-            <span className="text-[10px] font-mono text-red-400 uppercase tracking-widest">Canal Ouvert</span>
+            <span className="text-sm font-mono text-red-400 uppercase tracking-widest">Canal Ouvert</span>
           </motion.div>
 
-          <h1 className="font-serif text-4xl md:text-6xl text-white mb-4">Transmission</h1>
-          <p className="font-mono text-xs md:text-sm text-neutral-500 uppercase tracking-widest">
+          <h1 className="font-serif text-5xl md:text-8xl text-white mb-6">Transmission</h1>
+          <p className="font-mono text-base md:text-xl text-white/80 uppercase tracking-widest">
             Envoyez vos rapports, sons ou anomalies.
           </p>
         </div>
@@ -102,7 +102,7 @@ const response = await fetch("/send-mail.php", {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.2 }}
-          className="w-full max-w-2xl bg-[#0a0a0a] border border-white/10 p-8 md:p-12 relative overflow-hidden group"
+          className="w-full max-w-3xl bg-[#0a0a0a] border border-white/10 p-10 md:p-16 relative overflow-hidden group"
         >
           <div className="absolute inset-0 bg-linear-to-b from-transparent via-white/5 to-transparent h-2px w-full translate-y-100% group-hover:animate-scan" />
 
@@ -116,15 +116,15 @@ const response = await fetch("/send-mail.php", {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0, x: -20 }}
                 onSubmit={handleSubmit}
-                className="flex flex-col gap-8"
+                className="flex flex-col gap-10"
               >
                 {/* Champ: Identifiant */}
                 <div className="relative group/input">
-                  <label className="block font-mono text-[10px] uppercase tracking-widest text-neutral-500 mb-2 group-focus-within/input:text-red-500 transition-colors">
+                  <label className="block font-mono text-sm uppercase tracking-widest text-white/50 mb-2 group-focus-within/input:text-red-500 transition-colors">
                     01 — Identifiant
                   </label>
                   <div className="flex items-center gap-4 border-b border-white/10 group-focus-within/input:border-red-500 transition-colors py-2">
-                    <span className="text-neutral-600 font-mono">{">"}</span>
+                    <span className="text-white/30 font-mono text-xl">{">"}</span>
                     <input 
                       required
                       name="identifiant" // Important pour le state
@@ -132,18 +132,18 @@ const response = await fetch("/send-mail.php", {
                       onChange={handleChange} // Liaison event
                       type="text" 
                       placeholder="Votre Nom de Code" 
-                      className="bg-transparent w-full outline-none font-serif text-xl text-white placeholder:text-neutral-700"
+                      className="bg-transparent w-full outline-none font-serif text-3xl text-white placeholder:text-white/20"
                     />
                   </div>
                 </div>
 
                 {/* Champ: Fréquence (Email) */}
                 <div className="relative group/input">
-                  <label className="block font-mono text-[10px] uppercase tracking-widest text-neutral-500 mb-2 group-focus-within/input:text-red-500 transition-colors">
+                  <label className="block font-mono text-sm uppercase tracking-widest text-white/50 mb-2 group-focus-within/input:text-red-500 transition-colors">
                     02 — Fréquence de Retour
                   </label>
                   <div className="flex items-center gap-4 border-b border-white/10 group-focus-within/input:border-red-500 transition-colors py-2">
-                    <span className="text-neutral-600 font-mono">{">"}</span>
+                    <span className="text-white/30 font-mono text-xl">{">"}</span>
                     <input 
                       required
                       name="email"
@@ -151,34 +151,34 @@ const response = await fetch("/send-mail.php", {
                       onChange={handleChange}
                       type="email" 
                       placeholder="contact@exemple.com" 
-                      className="bg-transparent w-full outline-none font-serif text-xl text-white placeholder:text-neutral-700"
+                      className="bg-transparent w-full outline-none font-serif text-3xl text-white placeholder:text-white/20"
                     />
                   </div>
                 </div>
 
                 {/* Champ: Message */}
                 <div className="relative group/input">
-                  <label className="block font-mono text-[10px] uppercase tracking-widest text-neutral-500 mb-2 group-focus-within/input:text-red-500 transition-colors">
+                  <label className="block font-mono text-sm uppercase tracking-widest text-white/50 mb-2 group-focus-within/input:text-red-500 transition-colors">
                     03 — Données Cryptées
                   </label>
                   <div className="flex items-start gap-4 border-b border-white/10 group-focus-within/input:border-red-500 transition-colors py-2">
-                    <span className="text-neutral-600 font-mono mt-1">{">"}</span>
+                    <span className="text-white/30 font-mono text-xl mt-1">{">"}</span>
                     <textarea 
                       required
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
-                      rows={4}
+                      rows={5}
                       placeholder="Contenu du signal..." 
-                      className="bg-transparent w-full outline-none font-serif text-xl text-white placeholder:text-neutral-700 resize-none"
+                      className="bg-transparent w-full outline-none font-serif text-3xl text-white placeholder:text-white/20 resize-none"
                     />
                   </div>
                 </div>
 
                 {/* Affichage Erreur si besoin */}
                 {formState === "error" && (
-                    <div className="flex items-center gap-2 text-red-500 text-xs font-mono uppercase tracking-widest border border-red-500/20 bg-red-900/10 p-3">
-                        <AlertCircle size={14} />
+                    <div className="flex items-center gap-2 text-red-500 text-base font-mono uppercase tracking-widest border border-red-500/20 bg-red-900/10 p-4">
+                        <AlertCircle size={20} />
                         <span>Erreur: {errorMessage}</span>
                     </div>
                 )}
@@ -187,11 +187,11 @@ const response = await fetch("/send-mail.php", {
                 <div className="pt-6 flex justify-end">
                   <button 
                     type="submit"
-                    className="group/btn relative flex items-center gap-4 px-8 py-3 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white transition-all overflow-hidden"
+                    className="group/btn relative flex items-center gap-4 px-10 py-4 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white transition-all overflow-hidden"
                   >
                     <div className="absolute inset-0 bg-white/5 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300" />
-                    <span className="font-mono text-xs uppercase tracking-[0.2em] z-10">Initialiser l'envoi</span>
-                    <Send size={14} className="z-10 group-hover/btn:translate-x-1 transition-transform" />
+                    <span className="font-mono text-base uppercase tracking-[0.2em] z-10">Initialiser l'envoi</span>
+                    <Send size={18} className="z-10 group-hover/btn:translate-x-1 transition-transform" />
                   </button>
                 </div>
               </motion.form>
@@ -224,7 +224,7 @@ const response = await fetch("/send-mail.php", {
                     />
                   ))}
                 </div>
-                <p className="font-mono text-xs uppercase tracking-widest animate-pulse text-red-500">
+                <p className="font-mono text-sm uppercase tracking-widest animate-pulse text-red-500">
                   Uplink en cours... {Math.floor(signalStrength)}%
                 </p>
               </motion.div>
@@ -242,14 +242,14 @@ const response = await fetch("/send-mail.php", {
                   <CheckCircle2 size={32} />
                 </div>
                 <div>
-                  <h3 className="font-serif text-2xl text-white mb-2">Signal Reçu</h3>
-                  <p className="text-neutral-400 font-sans max-w-xs mx-auto">
+                  <h3 className="font-serif text-3xl text-white mb-2">Signal Reçu</h3>
+                  <p className="text-white/70 font-sans max-w-xs mx-auto text-lg">
                     Vos données ont été cryptées et archivées. Nous vous contacterons si la fréquence le permet.
                   </p>
                 </div>
                 <button 
                   onClick={() => setFormState("idle")}
-                  className="mt-6 text-[10px] font-mono uppercase tracking-widest text-neutral-500 hover:text-white border-b border-transparent hover:border-white transition-all pb-1"
+                  className="mt-6 text-xs font-mono uppercase tracking-widest text-white/80 hover:text-white border-b border-transparent hover:border-white transition-all pb-1"
                 >
                   Nouvelle transmission
                 </button>
@@ -258,7 +258,7 @@ const response = await fetch("/send-mail.php", {
 
           </AnimatePresence>
 
-          <div className="absolute bottom-4 left-6 right-6 flex justify-between text-[8px] font-mono text-neutral-700 uppercase tracking-widest pointer-events-none">
+          <div className="absolute bottom-4 left-6 right-6 flex justify-between text-[10px] font-mono text-white/20 uppercase tracking-widest pointer-events-none">
              <span>SECURE PROTOCOL: TLS 1.3</span>
              <span>LATENCY: 24ms</span>
           </div>

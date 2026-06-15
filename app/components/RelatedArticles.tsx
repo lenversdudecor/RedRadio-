@@ -23,7 +23,7 @@ const RELATED = [
 export default function RelatedArticles() {
   return (
     <div className="mt-24 border-t border-neutral-800 pt-16">
-      <h3 className="font-sans text-xs uppercase tracking-[0.3em] text-neutral-500 mb-8">
+      <h3 className="font-sans text-xs uppercase tracking-[0.3em] text-white/70 mb-8">
         Dossiers Connexes
       </h3>
 
@@ -50,13 +50,13 @@ export default function RelatedArticles() {
 
             {/* Texte */}
             <div className="pr-8">
-              <span className="text-[10px] font-mono text-red-500 mb-2 block">
+              <span className="text-xs font-mono text-red-500 mb-2 block">
                 {item.date}
               </span>
-              <h4 className="font-serif text-2xl text-neutral-200 group-hover:text-white transition-colors mb-3 leading-tight">
+              <h4 className="font-serif text-3xl text-white/90 group-hover:text-white transition-colors mb-3 leading-tight">
                 {item.title}
               </h4>
-              <p className="text-sm text-neutral-500 line-clamp-2 leading-relaxed">
+              <p className="text-base text-white/70 line-clamp-2 leading-relaxed">
                 {item.excerpt}
               </p>
             </div>

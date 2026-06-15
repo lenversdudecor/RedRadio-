@@ -41,8 +41,8 @@ export default function CookieConsent() {
         >
           <div className="max-w-5xl mx-auto bg-black/80 backdrop-blur-xl border border-neutral-800 p-6 md:p-8 flex flex-col md:flex-row gap-6 items-center justify-between shadow-[0_0_40px_rgba(0,0,0,0.5)] pointer-events-auto">
             <div className="flex-1">
-              <h3 className="font-serif text-xl md:text-2xl text-white mb-2">Transmission sécurisée / Cookies</h3>
-              <p className="text-neutral-400 text-xs md:text-sm leading-relaxed max-w-2xl">
+              <h3 className="font-serif text-2xl md:text-3xl text-white mb-2">Transmission sécurisée / Cookies</h3>
+              <p className="text-white/80 text-sm md:text-base leading-relaxed max-w-2xl">
                 Nous utilisons des cookies essentiels pour le fonctionnement du player radio, ainsi que des cookies analytiques visant à mesurer l'audience de nos fréquences. 
                 <Link href="/politique-de-confidentialite" className="ml-2 inline-flex border-b border-orange-800/50 text-orange-400 hover:text-orange-300 hover:border-orange-400 transition-all">
                   En savoir plus
@@ -53,13 +53,13 @@ export default function CookieConsent() {
             <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto shrink-0">
               <button 
                 onClick={declineCookies}
-                className="px-6 py-3 border border-neutral-700 hover:border-orange-500/50 hover:bg-orange-500/10 text-neutral-300 hover:text-white font-mono text-xs uppercase tracking-widest transition-all w-full sm:w-auto text-center"
+                className="px-8 py-4 border border-white/20 hover:border-orange-500/50 hover:bg-orange-500/10 text-white/70 hover:text-white font-mono text-sm uppercase tracking-widest transition-all w-full sm:w-auto text-center"
               >
                 Refuser
               </button>
               <button 
                 onClick={acceptCookies}
-                className="px-6 py-3 bg-neutral-200 hover:bg-white text-black font-mono text-xs uppercase tracking-widest transition-colors w-full sm:w-auto text-center shadow-[0_0_15px_rgba(255,255,255,0.1)]"
+                className="px-8 py-4 bg-white hover:bg-neutral-100 text-black font-mono text-sm uppercase tracking-widest transition-colors w-full sm:w-auto text-center shadow-[0_0_15px_rgba(255,255,255,0.1)]"
               >
                 Accepter
               </button>

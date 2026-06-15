@@ -13,9 +13,9 @@ export default function StorySlider() {
   const containerRef = useRef<HTMLDivElement>(null);
   
   // Style des boutons (J'ai retiré 'pointer-events-auto' d'ici pour le gérer dynamiquement)
-  const ctaClass = "group relative flex items-center gap-4 px-8 py-4 border border-neutral-800 bg-black/50 backdrop-blur-sm hover:bg-neutral-900 transition-all duration-500 overflow-hidden min-w-[240px] justify-center cursor-pointer";
-  const textClass = "font-serif text-xl text-[#e0d5c1] group-hover:text-white transition-colors z-10";
-  const iconClass = "text-neutral-500 group-hover:text-white transition-colors z-10";
+  const ctaClass = "group relative flex items-center gap-4 px-8 py-4 border border-white/20 bg-black/50 backdrop-blur-sm hover:bg-neutral-900 transition-all duration-500 overflow-hidden min-w-[240px] justify-center cursor-pointer";
+  const textClass = "font-serif text-3xl text-white group-hover:text-white transition-colors z-10";
+  const iconClass = "text-white/70 group-hover:text-white transition-colors z-10";
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -103,7 +103,7 @@ export default function StorySlider() {
                 {slide.type === 'cta' ? (
                   // --- SLIDE BOUTONS ---
                   <div className="flex flex-col items-center gap-8">
-                      <p className="text-xs uppercase tracking-[0.3em] text-neutral-500 mb-4 animate-pulse">
+                      <p className="text-base uppercase tracking-[0.3em] text-white mb-4 animate-pulse">
                         Transmission prête
                       </p>
                       
@@ -136,11 +136,11 @@ export default function StorySlider() {
                 ) : (
                   // --- SLIDE TEXTE ---
                   <>
-                    <p className="font-serif text-2xl md:text-5xl lg:text-4xl leading-relaxed text-[#e0d5c1] drop-shadow-2xl">
+                    <p className="font-serif text-4xl md:text-7xl lg:text-6xl leading-relaxed text-white drop-shadow-2xl">
                       {slide.text}
                     </p>
-                    <div className="mt-10 flex justify-center opacity-60">
-                      <span className="text-xs uppercase tracking-[0.3em] font-sans text-[#a89f8e] bg-black/30 px-4 py-2 backdrop-blur-sm rounded-full border border-white/10">
+                    <div className="mt-10 flex justify-center">
+                      <span className="text-base uppercase tracking-[0.3em] font-sans text-white bg-black/30 px-4 py-2 backdrop-blur-sm rounded-full border border-white/10">
                           — {slide.sub} —
                       </span>
                     </div>
@@ -150,10 +150,10 @@ export default function StorySlider() {
                          initial={{ opacity: 0, y: 20 }}
                          animate={{ opacity: 1, y: 0 }}
                          transition={{ delay: 1.5, duration: 1 }}
-                         className="mt-16 flex flex-col items-center gap-2 text-neutral-500"
+                         className="mt-16 flex flex-col items-center gap-2 text-white"
                        >
                          <Mouse size={24} className="animate-bounce" />
-                         <span className="text-[10px] font-mono uppercase tracking-widest opacity-70">
+                         <span className="text-sm font-mono uppercase tracking-widest text-white">
                            Scrollez pour entrer
                          </span>
                        </motion.div>

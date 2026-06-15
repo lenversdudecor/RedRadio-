@@ -9,7 +9,7 @@ export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <main className="relative bg-[#050505] min-h-screen text-[#e0d5c1]">
+    <main className="relative bg-[#050505] min-h-screen text-white">
       
       {/* 1. Background Layer */}
       <div className="noise-overlay" />
@@ -25,9 +25,9 @@ export default function Home() {
       <StorySlider />
       
       {/* 4. Petit footer discret */}
-      <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 text-neutral-800 text-[10px] uppercase tracking-widest flex flex-col items-center gap-1 mix-blend-difference">
+      <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-40 text-white text-xs uppercase tracking-widest flex flex-col items-center gap-1 mix-blend-difference">
          <span className="pointer-events-none">© 2026 L'Envers du Décor</span>
-         <Link href="/politique-de-confidentialite" className="pointer-events-auto hover:text-neutral-400 transition-colors">
+         <Link href="/politique-de-confidentialite" className="pointer-events-auto hover:text-white transition-colors">
             Politique de Confidentialité
          </Link>
       </div>

@@ -54,7 +54,7 @@ export default function PlayerBar() {
             
             {/* 1. INFO TRACK */}
             <div className="flex items-center gap-4 w-1/3 min-w-0">
-              <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded bg-neutral-800 border border-white/10">
+              <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded bg-neutral-800 border border-white/10">
                 <Image
                   src={currentTrack.coverImage}
                   alt={currentTrack.title}
@@ -63,12 +63,12 @@ export default function PlayerBar() {
                 />
               </div>
               <div className="flex flex-col overflow-hidden">
-                <span className="truncate font-serif text-sm font-bold text-neutral-200">
+                <span className="truncate font-serif text-xl font-bold text-white">
                   {currentTrack.title}
                 </span>
                 <div className="flex items-center gap-2">
-                    <span className="h-1 w-1 rounded-full bg-red-500 animate-pulse"></span>
-                    <span className="truncate text-[10px] uppercase tracking-wider text-neutral-500">
+                    <span className="h-2 w-2 rounded-full bg-red-500 animate-pulse"></span>
+                    <span className="truncate text-sm uppercase tracking-wider text-white/60">
                     En lecture
                     </span>
                 </div>
@@ -79,13 +79,13 @@ export default function PlayerBar() {
             <div className="flex w-1/3 flex-col items-center justify-center gap-1 md:gap-2">
               <button
                 onClick={togglePlay}
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-black hover:scale-105 transition-transform active:scale-95"
+                className="flex h-12 w-12 items-center justify-center rounded-full bg-white text-black hover:scale-105 transition-transform active:scale-95"
               >
-                {isPlaying ? <Pause size={20} fill="currentColor" /> : <Play size={20} fill="currentColor" className="ml-1" />}
+                {isPlaying ? <Pause size={24} fill="currentColor" /> : <Play size={24} fill="currentColor" className="ml-1" />}
               </button>
               
-              <div className="flex w-full max-w-md items-center gap-3 text-[10px] font-mono text-neutral-500">
-                <span className="w-8 text-right">{formatTime(progress)}</span>
+              <div className="flex w-full max-w-md items-center gap-3 text-sm font-mono text-white/60">
+                <span className="w-10 text-right">{formatTime(progress)}</span>
                 
                 {/* Barre de Progression Custom */}
                 <div className="relative flex-1 group h-6 flex items-center cursor-pointer">
@@ -102,7 +102,7 @@ export default function PlayerBar() {
                     className="absolute inset-0 z-20 w-full opacity-0 cursor-pointer"
                   />
                   {/* Background Track */}
-                  <div className="relative w-full h-1 bg-neutral-800 rounded-full overflow-hidden">
+                  <div className="relative w-full h-1.5 bg-neutral-800 rounded-full overflow-hidden">
                     {/* Active Track */}
                     <div 
                         className="absolute left-0 top-0 h-full bg-white transition-all duration-75 ease-out"
@@ -111,25 +111,25 @@ export default function PlayerBar() {
                   </div>
                   {/* Thumb (visible au hover) */}
                   <div 
-                     className="absolute h-3 w-3 bg-white rounded-full shadow pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity"
+                     className="absolute h-4 w-4 bg-white rounded-full shadow pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity"
                      style={{ left: `${(progress / (duration || 1)) * 100}%`, transform: 'translateX(-50%)' }}
                   />
                 </div>
 
-                <span className="w-8">{formatTime(duration)}</span>
+                <span className="w-10">{formatTime(duration)}</span>
               </div>
             </div>
 
             {/* 3. VOLUME & CLOSE */}
-            <div className="flex w-1/3 justify-end items-center gap-4 md:gap-6">
+            <div className="flex w-1/3 justify-end items-center gap-4 md:gap-8">
               {/* Contrôle de Volume */}
-              <div className=" md:flex items-center gap-2 group">
-                <button onClick={() => setVolume(volume === 0 ? 0.8 : 0)} className="text-neutral-500 hover:text-white transition-colors flex flex-col">
-                    <VolumeIcon size={18} />
+              <div className=" md:flex items-center gap-3 group">
+                <button onClick={() => setVolume(volume === 0 ? 0.8 : 0)} className="text-white/70 hover:text-white transition-colors flex flex-col">
+                    <VolumeIcon size={22} />
                 </button>
-                <div className="w-20 h-1 bg-neutral-800 rounded-full relative overflow-hidden group-hover:w-24 transition-all duration-300">
+                <div className="w-24 h-1.5 bg-neutral-800 rounded-full relative overflow-hidden group-hover:w-32 transition-all duration-300">
                     <div 
-                        className="absolute left-0 top-0 h-full bg-neutral-500 group-hover:bg-white transition-colors"
+                        className="absolute left-0 top-0 h-full bg-white transition-colors"
                         style={{ width: `${volume * 100}%` }}
                     />
                     <input 
@@ -144,9 +144,9 @@ export default function PlayerBar() {
               
               <button 
                 onClick={closePlayer}
-                className="text-neutral-500 hover:text-white hover:bg-white/10 p-2 rounded-full transition-all"
+                className="text-white/70 hover:text-white hover:bg-white/10 p-3 rounded-full transition-all"
               >
-                <X size={20} />
+                <X size={24} />
               </button>
             </div>
 

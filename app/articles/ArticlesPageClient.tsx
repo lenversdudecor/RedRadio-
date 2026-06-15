@@ -35,7 +35,7 @@ export default function ArticlesPageClient({ articles }: ArticlesPageClientProps
           <div className="max-w-7xl mx-auto">
             {/* Fil d'ariane stylisé */}
             <div className="flex items-center gap-4 mb-4 md:mb-6">
-              <span className="text-[10px] md:text-xs font-bold text-orange-600 tracking-[0.2em] md:tracking-[0.3em] uppercase whitespace-nowrap">
+              <span className="text-xs md:text-sm font-bold text-orange-600 tracking-[0.2em] md:tracking-[0.3em] uppercase whitespace-nowrap">
                 Récits
               </span>
               <div className="flex-1 h-px bg-gradient-to-r from-orange-600/50 to-transparent"></div>
@@ -43,14 +43,14 @@ export default function ArticlesPageClient({ articles }: ArticlesPageClientProps
 
             {/* Titre Responsive */}
             <h1 
-              className="font-serif text-4xl sm:text-5xl md:text-7xl leading-[1.1] mb-4 md:mb-6 text-neutral-100" 
+              className="font-serif text-5xl sm:text-6xl md:text-8xl leading-[1.1] mb-4 md:mb-6 text-white" 
               style={{ fontFamily: 'Playfair Display, serif' }}
             >
               Articles
             </h1>
 
             {/* Sous-titre */}
-            <p className="text-neutral-400 text-base md:text-lg max-w-2xl leading-relaxed">
+            <p className="text-white/80 text-xl md:text-2xl max-w-2xl leading-relaxed">
               Sélection de récits et essais — lus sur les ondes de l'Envers du Décor.
             </p>
           </div>
@@ -70,36 +70,36 @@ export default function ArticlesPageClient({ articles }: ArticlesPageClientProps
                   <div className="absolute top-0 left-0 h-[2px] w-0 bg-orange-600 group-hover:w-full transition-all duration-700 ease-out"></div>
 
                   {/* Contenu de la carte */}
-                  <div className="relative p-5 md:p-6 h-full flex flex-col z-10">
+                  <div className="relative p-6 md:p-8 h-full flex flex-col z-10">
                     
                     {/* Tag */}
                     <div className="flex items-center gap-2 mb-3 md:mb-4">
-                      <div className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-orange-600 shadow-[0_0_8px_rgba(234,88,12,0.5)]"></div>
-                      <span className="text-[10px] md:text-xs font-bold text-orange-500/90 uppercase tracking-[0.15em]">
+                      <div className="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-orange-600 shadow-[0_0_8px_rgba(234,88,12,0.5)]"></div>
+                      <span className="text-sm md:text-base font-bold text-orange-500/90 uppercase tracking-[0.15em]">
                         {a.tags?.[0] ?? 'article'}
                       </span>
                     </div>
 
                     {/* Titre */}
                     <h2 
-                      className="font-serif text-xl md:text-2xl leading-tight mb-3 text-neutral-200 group-hover:text-orange-100 transition-colors duration-300 line-clamp-2" 
+                      className="font-serif text-3xl md:text-4xl leading-tight mb-3 text-white group-hover:text-orange-100 transition-colors duration-300 line-clamp-2" 
                       style={{ fontFamily: 'Playfair Display, serif' }}
                     >
                       {a.title}
                     </h2>
 
                     {/* Extrait */}
-                    <p className="text-neutral-500 text-sm leading-relaxed mb-6 grow line-clamp-3 md:line-clamp-4 group-hover:text-neutral-400 transition-colors">
+                    <p className="text-white/70 text-lg leading-relaxed mb-6 grow line-clamp-3 md:line-clamp-4 group-hover:text-white/90 transition-colors">
                       {a.excerpt}
                     </p>
 
                     {/* Footer de la carte */}
                     <div className="flex justify-between items-end border-t border-neutral-800/50 pt-4 mt-auto">
                       <div className="flex flex-col gap-0.5">
-                        <span className="text-[10px] md:text-xs text-neutral-400 group-hover:text-orange-200/70 transition-colors">
+                        <span className="text-sm md:text-base text-white/80 group-hover:text-orange-200/70 transition-colors">
                           Par {a.author}
                         </span>
-                        <time className="text-[10px] text-neutral-600 font-mono">
+                        <time className="text-sm text-white/70 font-mono">
                           {new Date(a.date).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })}
                         </time>
                       </div>

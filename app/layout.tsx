@@ -32,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className={`${playfair.variable} ${inter.variable}`}>
-      <body className="antialiased bg-black text-neutral-200 font-sans selection:bg-white selection:text-black">
+      <body className="antialiased bg-black text-white font-sans selection:bg-white selection:text-black">
         
         {/* --- DÉBUT : GOOGLE ANALYTICS --- */}
         {/* N'oublie pas de remplacer G-XXXXXXXXXX par ton vrai ID de mesure */}

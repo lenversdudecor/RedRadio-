@@ -17,11 +17,11 @@ export default function MenuOverlay ({isOpen, onClose} : MenuOverlayProps){
         animate={{opacity:1}}
         exit={{opacity:0}}
         transition={{duration:0.5}}
-        className="fixed inset-0 z-100 flex items-center justify-center bg-[#050505]/95 backdrop-blur-xl text-[#e0d5c1]"
+        className="fixed inset-0 z-100 flex items-center justify-center bg-[#050505]/95 backdrop-blur-xl text-white"
         >
           <button 
           onClick={onClose}
-          className="absolute top-6 left-6 md:top-12 md:left-12 flex items-center gap-3 text-xs uppercase tracking-[0.2em] group hover:text-white transition-colors duration-5"
+          className="absolute top-6 left-6 md:top-12 md:left-12 flex items-center gap-3 text-sm uppercase tracking-[0.2em] group hover:text-white transition-colors duration-5"
           >
             <div className="p-2 border border-white/20 rounded-full group-hover:border-white transition-colors">
               <X size={16} />
@@ -41,8 +41,8 @@ export default function MenuOverlay ({isOpen, onClose} : MenuOverlayProps){
                 <Link href={link.href}
                 target={link.external ? "_blank": undefined}
                 onClick={onClose}
-                className="group flex items-baseline gap-6 font-serif text-4xl md:text-6xl lg:text-7xl hover:text-white transition-colors">
-                  <span className="font-sans text-xs md:text-sm text-neutral-600 font-bold tracking-widest -translate-y-4 group-hover:text-neutral-400 transition-colors">
+                className="group flex items-baseline gap-6 font-serif text-5xl md:text-7xl lg:text-8xl hover:text-white transition-colors">
+                  <span className="font-sans text-sm md:text-base text-white/60 font-bold tracking-widest -translate-y-4 group-hover:text-white transition-colors">
                     {link.id}
                   </span>
                   
@@ -50,11 +50,11 @@ export default function MenuOverlay ({isOpen, onClose} : MenuOverlayProps){
                     <span className="block group-hover:-translate-y-full transition-transform duration-500 ease-[0.22,1,0.36,1]">
                       {link.label}
                     </span>
-                    <span className="absolute top-0 left-0 block translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[0.22,1,0.36,1] text-neutral-400 italic">
+                    <span className="absolute top-0 left-0 block translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-[0.22,1,0.36,1] text-white/40 italic">
                       {link.label}
                     </span>
                   </span>
-                  <ArrowRight size ={24} className="opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-neutral-500"/>
+                  <ArrowRight size ={24} className="opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-white/50"/>
                 </Link>
               </motion.div>
             ))}

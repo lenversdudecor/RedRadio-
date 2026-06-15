@@ -74,20 +74,20 @@ export default function Preloader() {
             
             {/* Fréquence */}
             <div className="relative mb-6">
-              <h1 className="font-mono text-6xl md:text-8xl font-bold tracking-tighter text-white tabular-nums leading-none">
+              <h1 className="font-mono text-7xl md:text-9xl font-bold tracking-tighter text-white tabular-nums leading-none">
                 {frequency.toFixed(1)}
               </h1>
-              <span className="absolute -right-8 top-2 text-xl md:text-2xl text-neutral-600 font-mono">MHz</span>
+              <span className="absolute -right-10 top-2 text-2xl md:text-3xl text-white/40 font-mono">MHz</span>
             </div>
 
             {/* Message Status */}
-            <div className="flex flex-col items-center gap-3 w-64">
-              <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-red-500 animate-pulse h-4 text-center">
+            <div className="flex flex-col items-center gap-3 w-72">
+              <p className="font-mono text-xs md:text-sm uppercase tracking-[0.3em] text-red-500 animate-pulse h-4 text-center">
                 {message}
               </p>
               
               {/* Barre de chargement infinie */}
-              <div className="w-full h-2px bg-neutral-900 overflow-hidden relative">
+              <div className="w-full h-[3px] bg-neutral-900 overflow-hidden relative">
                  <motion.div 
                    className="absolute top-0 bottom-0 bg-white w-1/2"
                    animate={{ left: ["-50%", "100%"] }}
@@ -110,7 +110,7 @@ export default function Preloader() {
 
           {/* Footer technique */}
           <div className="absolute bottom-8 left-0 right-0 text-center">
-            <p className="text-[9px] text-neutral-600 font-mono uppercase tracking-widest">
+            <p className="text-xs text-white/30 font-mono uppercase tracking-widest">
               System Boot sequence v2.4
             </p>
           </div>

@@ -7,7 +7,7 @@ interface InterfaceOverlayProps {
 
 export default function InterfaceOverlay({openMenu}: InterfaceOverlayProps) {
   // Style commun 
-  const btnClass = "fixed z-40 flex items-center gap-3 px-5 py-3 bg-black/40 backdrop-blur-md border border-white/10 text-xs font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-black hover:border-white transition-all duration-300 group";
+  const btnClass = "fixed z-40 flex items-center gap-3 px-6 py-4 bg-black/40 backdrop-blur-md border border-white/10 text-base font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-black hover:border-white transition-all duration-300 group";
 
   return (
     <>

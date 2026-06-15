@@ -28,7 +28,7 @@ const handlePlayClick = (podcast: any) => {
   };
 
   return (
-    <main className="relative min-h-screen bg-[#050505] text-[#e0d5c1] selection:bg-white selection:text-black">
+    <main className="relative min-h-screen bg-[#050505] text-white selection:bg-white selection:text-black">
       
       <div className="noise-overlay" />
       <div className="ambient-light fixed inset-0 opacity-50" />
@@ -45,19 +45,19 @@ const handlePlayClick = (podcast: any) => {
           className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6"
         >
           <div>
-             <h1 className="font-serif text-5xl md:text-7xl font-bold tracking-tight mb-4">Archives</h1>
-             <p className="text-neutral-500 max-w-md">Accédez à l'historique complet des transmissions.</p>
+             <h1 className="font-serif text-7xl md:text-9xl font-bold tracking-tight mb-4">Archives</h1>
+             <p className="text-white/80 text-xl md:text-2xl max-w-md">Accédez à l'historique complet des transmissions.</p>
           </div>
           {/* ... Search bar inchangée ... */}
         </motion.div>
 
         {/* ... (En-tête Tableau inchangé) ... */}
-        <div className="grid grid-cols-[auto_1fr_auto_auto] gap-4 px-4 py-2 text-xs uppercase tracking-widest text-neutral-600 border-b border-white/10 mb-4 font-bold">
+        <div className="grid grid-cols-[auto_1fr_auto_auto] gap-4 px-4 py-2 text-base uppercase tracking-widest text-white/70 border-b border-white/10 mb-4 font-bold">
            {/* ... */}
         </div>
 
         {/* Liste des Podcasts */}
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-2">
           {PODCASTS_DATA.map((podcast, index) => {
             const isActive = isTrackPlaying(podcast.id);
             const isCurrent = currentTrack?.id === podcast.id;
@@ -71,26 +71,26 @@ const handlePlayClick = (podcast: any) => {
                 onMouseEnter={() => setHoveredId(podcast.id)}
                 onMouseLeave={() => setHoveredId(null)}
                 onClick={() => handlePlayClick(podcast)} // Le clic sur la ligne lance aussi
-                className={`group relative grid grid-cols-[auto_1fr_auto_auto] items-center gap-4 px-4 py-4 rounded-lg transition-colors cursor-pointer border border-transparent 
+                className={`group relative grid grid-cols-[auto_1fr_auto_auto] items-center gap-6 px-6 py-6 rounded-lg transition-colors cursor-pointer border border-transparent 
                   ${isCurrent ? "bg-white/10 border-white/5" : "hover:bg-white/5 hover:border-white/5"}`}
               >
                 {/* Colonne 1 : Play/Pause/Index */}
-                <div className="w-8 text-center font-serif text-neutral-500 text-lg flex justify-center">
+                <div className="w-10 text-center font-serif text-white/70 text-2xl flex justify-center">
                   {/* Logique d'affichage de l'icône */}
                   {isActive ? (
-                    <Pause size={18} className="text-[#e0d5c1] fill-current" />
+                    <Pause size={24} className="text-white fill-current" />
                   ) : hoveredId === podcast.id ? (
-                    <Play size={18} className="text-white fill-white" />
+                    <Play size={24} className="text-white fill-white" />
                   ) : (
                     // Si c'est la piste en cours mais en pause, on montre un égaliseur statique ou l'index
-                    isCurrent ? <span className="text-[#e0d5c1] animate-pulse">❚❚</span> : 
-                    <span className="text-sm md:text-base">{(index + 1).toString().padStart(2, '0')}</span>
+                    isCurrent ? <span className="text-white animate-pulse">❚❚</span> : 
+                    <span className="text-lg md:text-xl">{(index + 1).toString().padStart(2, '0')}</span>
                   )}
                 </div>
 
                 {/* Colonne 2 : Info & Cover */}
-                <div className="flex items-center gap-4 overflow-hidden">
-                  <div className="relative h-10 w-10 md:h-12 md:w-12 shrink-0 bg-neutral-800 rounded overflow-hidden">
+                <div className="flex items-center gap-6 overflow-hidden">
+                  <div className="relative h-12 w-12 md:h-16 md:w-16 shrink-0 bg-neutral-800 rounded overflow-hidden">
                      <Image 
                        src={podcast.coverImage} 
                        alt={podcast.title} 
@@ -99,23 +99,23 @@ const handlePlayClick = (podcast: any) => {
                      />
                   </div>
                   <div className="flex flex-col min-w-0">
-                    <span className={`font-serif text-lg md:text-xl truncate transition-colors ${isCurrent ? "text-[#e0d5c1]" : "text-neutral-200 group-hover:text-white"}`}>
+                    <span className={`font-serif text-2xl md:text-3xl truncate transition-colors ${isCurrent ? "text-white" : "text-white/90 group-hover:text-white"}`}>
                       {podcast.title}
                     </span>
-                    <span className="text-xs md:text-sm text-neutral-500 truncate group-hover:text-neutral-400">
+                    <span className="text-base md:text-lg text-white/80 truncate group-hover:text-white/90">
                       {podcast.description}
                     </span>
                   </div>
                 </div>
 
                 {/* Colonne 3 : Date */}
-                <div className="hidden md:flex items-center gap-2 text-sm text-neutral-500">
-                  <Calendar size={14} />
+                <div className="hidden md:flex items-center gap-2 text-lg text-white/70">
+                  <Calendar size={18} />
                   {podcast.publishedAt}
                 </div>
 
                 {/* Colonne 4 : Durée */}
-                <div className="text-sm font-mono text-neutral-600 group-hover:text-neutral-300 text-right min-w-12.5">
+                <div className="text-lg font-mono text-white/70 group-hover:text-white/90 text-right min-w-16">
                   {podcast.duration}
                 </div>
 
